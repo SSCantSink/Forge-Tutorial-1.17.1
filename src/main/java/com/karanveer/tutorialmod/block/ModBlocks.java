@@ -26,10 +26,10 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, TutorialMod.MOD_ID);
 
     public static final RegistryObject<Block> TITANIUM_BLOCK = registerBlock("titanium_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(12f)), CreativeModeTab.TAB_MATERIALS);
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(12f).requiresCorrectToolForDrops()), CreativeModeTab.TAB_MATERIALS);
 
     public static final RegistryObject<Block> TITANIUM_ORE = registerBlock("titanium_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(12f)));
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(10f).requiresCorrectToolForDrops()));
 
     /**
      * Used to register a block to Minecraft under any
