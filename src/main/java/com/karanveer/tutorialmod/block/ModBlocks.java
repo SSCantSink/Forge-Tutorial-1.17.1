@@ -1,6 +1,7 @@
 package com.karanveer.tutorialmod.block;
 
 import com.karanveer.tutorialmod.TutorialMod;
+import com.karanveer.tutorialmod.block.custom.SpeedyBlock;
 import com.karanveer.tutorialmod.item.ModCreativeModeTab;
 import com.karanveer.tutorialmod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -30,6 +31,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> TITANIUM_ORE = registerBlock("titanium_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(10f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> SPEEDY_BLOCK = registerBlock("speedy_block",
+            () -> new SpeedyBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5f).requiresCorrectToolForDrops()));
 
     /**
      * Used to register a block to Minecraft under any
