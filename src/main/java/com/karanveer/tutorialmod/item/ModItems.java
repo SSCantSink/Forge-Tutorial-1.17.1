@@ -1,6 +1,7 @@
 package com.karanveer.tutorialmod.item;
 
 import com.karanveer.tutorialmod.TutorialMod;
+import com.karanveer.tutorialmod.item.custom.CoalCokeItem;
 import com.karanveer.tutorialmod.item.custom.SmartBlowTorchItem;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -44,6 +45,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> SMART_BLOW_TORCH = ITEMS.register("smart_blow_torch",
             () -> new SmartBlowTorchItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).durability(64)));
+
+    public static final RegistryObject<Item> COAL_COKE= ITEMS.register("coal_coke",
+            () -> new CoalCokeItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
 
     // Registers a food with so-n-so nutrition and saturation under the custom creative mod tab tutorial tab
