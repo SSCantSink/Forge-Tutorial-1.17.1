@@ -44,6 +44,7 @@ public class ModBlocks {
             () -> new StairBlock(() -> TITANIUM_BLOCK.get().defaultBlockState(),
                     BlockBehaviour.Properties.of(Material.METAL).strength(5f).requiresCorrectToolForDrops()));
 
+    // wait, there's more classes than just blocks? Insane!
     public static final RegistryObject<Block> TITANIUM_FENCE = registerBlock("titanium_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5f).requiresCorrectToolForDrops()));
 
@@ -55,6 +56,24 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> TITANIUM_SLAB = registerBlock("titanium_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> TITANIUM_BUTTON = registerBlock("titanium_button",
+            () -> new StoneButtonBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5f).requiresCorrectToolForDrops()));
+
+    // Pressure Plates need a sensitivity for it's first parameter for either everything (items) or just mobs
+    public static final RegistryObject<Block> TITANIUM_PRESSURE_PLATE = registerBlock("titanium_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
+                    BlockBehaviour.Properties.of(Material.METAL).strength(5f).requiresCorrectToolForDrops()));
+
+    // adding no occlusion property. So textures with an alpha (transparency) will show up properly
+    // notice we've chosen Material.METAL as one property which makes the door unopenable bu hand.
+    public static final RegistryObject<Block> TITANIUM_DOOR = registerBlock("titanium_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5f)
+                    .requiresCorrectToolForDrops().noOcclusion()));
+
+    public static final RegistryObject<Block> TITANIUM_TRAPDOOR = registerBlock("titanium_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.METAL).strength(5f).
+                    requiresCorrectToolForDrops().noOcclusion()));
 
 
     /**
