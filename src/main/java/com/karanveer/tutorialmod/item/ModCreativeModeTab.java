@@ -8,7 +8,7 @@ import net.minecraft.world.item.ItemStack;
  * Blocks
  */
 public class ModCreativeModeTab {
-    public static final CreativeModeTab TUTORIAL_TAB = new CreativeModeTab("tutorialModTab") {
+    public static final CreativeModeTab TUTORIAL_TAB = new CreativeModeTab("tutorial_mod_tab") {
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(ModItems.TITANIUM_INGOT.get());
