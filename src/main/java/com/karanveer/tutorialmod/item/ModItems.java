@@ -5,6 +5,7 @@ import com.karanveer.tutorialmod.item.custom.CoalCokeItem;
 import com.karanveer.tutorialmod.item.custom.SmartBlowTorchItem;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
@@ -47,6 +48,7 @@ public class ModItems {
             () -> new CoalCokeItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
 
+    // Tools and stuff
     public static final RegistryObject<Item> TITANIUM_SWORD = ITEMS.register("titanium_sword",
             () -> new SwordItem(ModTiers.TITANIUM, 2, 1f,
                     new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
@@ -65,6 +67,24 @@ public class ModItems {
 
     public static final RegistryObject<Item> TITANIUM_HOE = ITEMS.register("titanium_hoe",
             () -> new HoeItem(ModTiers.TITANIUM, -3, 1f,
+                    new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+
+    // Armor items
+    public static final RegistryObject<Item> TITANIUM_BOOTS = ITEMS.register("titanium_boots",
+            () -> new ArmorItem(ModArmorMaterial.TITANIUM, EquipmentSlot.FEET,
+                    new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Item> TITANIUM_LEGGINGS = ITEMS.register("titanium_leggings",
+            () -> new ArmorItem(ModArmorMaterial.TITANIUM, EquipmentSlot.LEGS,
+                    new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Item> TITANIUM_CHESTPLATE = ITEMS.register("titanium_chestplate",
+            () -> new ArmorItem(ModArmorMaterial.TITANIUM, EquipmentSlot.CHEST,
+                    new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Item> TITANIUM_HELMET = ITEMS.register("titanium_helmet",
+            () -> new ArmorItem(ModArmorMaterial.TITANIUM, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
 
