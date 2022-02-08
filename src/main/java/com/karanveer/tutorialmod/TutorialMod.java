@@ -1,6 +1,7 @@
 package com.karanveer.tutorialmod;
 
 import com.karanveer.tutorialmod.block.ModBlocks;
+import com.karanveer.tutorialmod.enchantment.ModEnchantments;
 import com.karanveer.tutorialmod.item.ModItems;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -37,6 +38,8 @@ public class TutorialMod
 
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+
+        ModEnchantments.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::setupClient); // so we register that method below on the client
