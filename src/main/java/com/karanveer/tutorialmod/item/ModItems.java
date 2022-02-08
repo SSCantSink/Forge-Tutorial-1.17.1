@@ -2,6 +2,7 @@ package com.karanveer.tutorialmod.item;
 
 import com.karanveer.tutorialmod.TutorialMod;
 import com.karanveer.tutorialmod.item.custom.CoalCokeItem;
+import com.karanveer.tutorialmod.item.custom.ModArmorItem;
 import com.karanveer.tutorialmod.item.custom.SmartBlowTorchItem;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -84,7 +85,7 @@ public class ModItems {
                     new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
     public static final RegistryObject<Item> TITANIUM_HELMET = ITEMS.register("titanium_helmet",
-            () -> new ArmorItem(ModArmorMaterial.TITANIUM, EquipmentSlot.HEAD,
+            () -> new ModArmorItem(ModArmorMaterial.TITANIUM, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
 
